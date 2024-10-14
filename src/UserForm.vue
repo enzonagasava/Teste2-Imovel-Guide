@@ -5,7 +5,7 @@
 
     const user = ref({
     name: '',
-    surname: '',
+    sobrename: '',
     photo: ''
     });
 
@@ -22,8 +22,8 @@
     emit('changeColor', color);
     };
 
-    const changeBorder = (colorB) => {
-        emit('changeBorder', colorB)
+    const changeBorder = (color) => {
+        emit('changeBorder', color)
     };
 </script>
 
@@ -37,13 +37,13 @@
                     <img style="width: 100%; height: 100%;" :src="user.photo" v-if="user.photo">
                 </div>
                 <label class="label-selecao" for="selecao-arquivo"> ADICIONAR FOTO</label>
-        <input class="btn" id="selecao-arquivo" style="width: 250px;" type="file" @change="handleFileChange">
+        <input class="btn" id="selecao-arquivo" type="file" @change="handleFileChange">
             </div>
         <div class="m-3">
             <label for="">Nome</label>
             <input class="mb-4" type="text" v-model="user.name" placeholder="Nome">
             <label for="">Sobrenome</label>
-            <input type="text" v-model="user.surname" placeholder="Sobrenome">
+            <input type="text" v-model="user.sobrename" placeholder="Sobrenome">
         </div>
         </div>        
     </div>
@@ -105,14 +105,13 @@ input[type='file']{
 
 .label-selecao{
     background-color: #ff9900;
-    border-radius: 5px;
     color: #fff;
     cursor: pointer;
     margin-top: .5em;
     padding: 6px;
     align-items: center;
     text-align: center;
-    width: 250px;
+    width: 100%;
     height: 40px;
     font-size: 20px;
 }

@@ -6,13 +6,13 @@ import { ref } from 'vue';
 
     const user = ref({
     name: '',
-    surname: '',
+    sobrename: '',
     photo: ''
     });
 
     const cardColor = ref('#ecb117');
 
-    const colorBorder = ref('#000');
+    const colorBorder = ref('#cccccc');
 
     const updateUser = (updatedUser) => {
     user.value = updatedUser;
@@ -22,8 +22,8 @@ import { ref } from 'vue';
     cardColor.value = color;
     };
 
-    const changeBorder = (colorB) => {
-    colorBorder.value = colorB
+    const changeBorder = (color) => {
+    colorBorder.value = color
     };
 </script>
 
