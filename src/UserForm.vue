@@ -36,7 +36,8 @@
                 <div class="preview">
                     <img style="width: 100%; height: 100%;" :src="user.photo" v-if="user.photo">
                 </div>
-        <input class="btn" style="width: 250px;" type="file" @change="handleFileChange">
+                <label class="label-selecao" for="selecao-arquivo"> ADICIONAR FOTO</label>
+        <input class="btn" id="selecao-arquivo" style="width: 250px;" type="file" @change="handleFileChange">
             </div>
         <div class="m-3">
             <label for="">Nome</label>
@@ -96,6 +97,24 @@ input{
     height: 2.5em;
     width: 220px;
     text-transform: uppercase
+}
+
+input[type='file']{
+    display: none;
+}
+
+.label-selecao{
+    background-color: #ff9900;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: .5em;
+    padding: 6px;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    height: 40px;
+    font-size: 20px;
 }
 
 img {

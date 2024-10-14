@@ -33,7 +33,7 @@ import { defineProps } from 'vue';
 
 <style>
 .card {
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     padding: 16px;
     margin-top: 20px;
     width: 200px;
