@@ -16,7 +16,7 @@ import { defineProps } from 'vue';
     <div class="row d-block">
         <div class="col d-flex justify-content-center">
             <div :style="{ backgroundColor: cardColor }" class="card" style="width: 300px; height: 300px; border-radius: 0;">
-                <div :style="{borderColor: colorBorder}"  style="border: solid 3px; height: 90%; width: 90%;">
+                <div :style="{borderColor: colorBorder}" class="borda-card" >
                     <img :src="user.photo" alt="Foto do Usuário" v-if="user.photo" style="width: 100%; height: 100%; margin-bottom: 0;">
                 </div>
     </div>
@@ -44,5 +44,10 @@ import { defineProps } from 'vue';
     justify-content: center;
 }
 
+.borda-card{
+    border: solid 3px;
+    height: 90%; 
+    width: 90%;
+}
 
 </style>

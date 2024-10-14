@@ -23,7 +23,7 @@
     };
 
     const changeBorder = (color) => {
-        emit('changeBorder', color)
+    emit('changeBorder', color)
     };
 </script>
 
